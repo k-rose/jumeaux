@@ -1,7 +1,8 @@
 FROM python:3.7
 
-RUN pip install jumeaux==4.0.0
+COPY . /jumeaux
+RUN pip install /jumeaux
 WORKDIR tmp
 
-ENTRYPOINT ["jumeaux", "run"]
+ENTRYPOINT ["jumeaux"]
 
