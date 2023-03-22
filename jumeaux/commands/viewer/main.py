@@ -31,6 +31,7 @@ def run(args: Args):
     server.watch(f"{args.responses_dir}/latest/report.json", reload)
     server.serve(
         root=f"{args.responses_dir}/latest",
+        host='0.0.0.0',
         port=args.port,
         restart_delay=0,
         open_url_delay=1,
